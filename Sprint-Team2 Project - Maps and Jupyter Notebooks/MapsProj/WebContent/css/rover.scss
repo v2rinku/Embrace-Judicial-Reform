@@ -1,0 +1,685 @@
+$fontStack: Helvetica, sans-serif;
+$baseColor: #008abf;
+$aqua: #55e1dc;
+$orangeAccent: #ffb23b;
+$blueAccent: #0090ff;
+$activeDark: #00649d;
+$hoverBase: #224043;
+
+$columnWidth: 180px;
+$headerHeight: 40px;
+$mapTopOffset: 288px;
+$legendSize: 420px;
+$socialOptionWidth: 390px;
+$optionSlideWidth: 500px;
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin custom-select($size) {
+    -webkit-appearance: none;
+    padding: 5px;
+    padding-right: 30px;
+    font-size: $size * 1px;
+    line-height: 1;
+    height: 2 * $size * 1px;
+    border: 1px solid $aqua;
+    background: url("../img/compressed/down-arrow.png") no-repeat right;
+}
+
+@mixin media-query($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: $fontStack;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+header {
+    background-color: $baseColor;
+    height: $headerHeight;
+    position: relative;
+    z-index: 5;
+    
+    #title-wrapper {
+        display: inline-block;
+        //width: $columnWidth + 40;
+        margin-left: 2px;
+        margin-top: 6px;
+    
+        img {
+            width: 60px;
+        }
+        
+        h1 {
+            //color: $aqua;
+            color: white;
+            display: inline-block;
+            margin: 0 0 0 0;
+            font-weight: 100;
+            position: relative;
+            top: -10px;
+        }
+    }
+    
+    span {
+        color: white;
+        margin-left: 100px;
+        position: relative;
+        top: -15px;
+    }
+        
+    select {        
+        color: white;
+        @include custom-select(16);
+        
+        option {
+            background: $baseColor;
+        }
+    }
+    
+    //this only triggers in firefox
+    _:-moz-tree-row(hover), select {
+        background: none;
+        padding-right: 5px;
+    }
+    
+    #map-time-slider {
+        display: none;
+        margin-left: 100px;
+        
+        #date-elem {
+            display: block;
+            text-align: center;
+            margin-left: 0;
+            padding: 0;
+            position: relative;
+            top: 0px;
+        }
+        
+        //slidercurrently only styled in chrome
+        #slide-input {
+            -webkit-appearance: none;
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            opacity: 1;
+            height: 3px;
+            position: relative;
+            bottom: 6px;
+        }
+        
+        #slide-input::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            
+            border-radius: 10px;
+            background-color: $aqua;
+            border: 1px solid #999;
+            cursor: pointer;
+            
+            //background-color: #666;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    #options-toggle {
+        transition: 0.5s;
+        position: fixed;
+        right: 0px;
+        top: 10px;
+        font-size: 40px;
+        background-color: $activeDark;
+        //background-color: white;
+        width: 54px;
+        height: 46px;
+        text-align: center;
+        cursor: pointer;
+        span {
+            color: $aqua;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            top: -8px;
+        }
+        img {
+            width: 60%;
+        }
+    }
+    
+    #export-button {
+        color: white;
+        position: fixed;
+        right: 60px;
+        top: 10px;
+        padding: 3px;
+        border: 1px solid white;
+        cursor: pointer;
+    }
+    
+    #export-button:hover {
+        background-color: $hoverBase;
+    }
+}
+
+#options-slide {
+    transition: 0.5s;    
+    position: fixed;
+    right: -$optionSlideWidth;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1001; //the attribution on the map is at 1000. got'em
+    background: $activeDark;
+    color: white;
+    width: $optionSlideWidth;
+    
+    h4 {
+        text-align: center;
+        margin-top: 10px;
+    }
+    p {
+        text-align: center;
+        margin: 10px;
+    }    
+    #show-filter-logic {
+        padding: 0;
+        text-decoration: underline;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    #filter-criteria {
+        transition: 0.5s;
+        background-color: white;
+        color: black;
+        border: 5px solid $activeDark;
+        overflow: hidden;
+        height: 0px;
+        dl {
+            dt{
+                float: left;
+                position: relative;
+                top: 4px;
+                width: 100px;
+                text-align: right;
+                img {
+                    height: 16px;
+                }
+            }
+            dd {
+                width: 220px;
+                float: right;
+                position: relative;
+                right: 40px;    
+            }
+            .clear-dd {
+                height: 4px;
+            }
+        }
+    }
+    input {
+        margin-left: 20px;
+    }
+    button {
+        margin: 20px auto 0 auto;
+        display: block;
+    }
+    select {        
+        color: white;
+        @include custom-select(12);
+        
+        option {
+            background: $activeDark;
+        }
+    }
+    #show-since {
+        position: relative;
+        left: 18px;
+    }
+    a {
+        color: white;
+    }
+}
+
+#nav-col {
+    width: $columnWidth;
+    background-color: $baseColor;
+    height: calc(100% - #{$headerHeight});
+    position: relative;
+    z-index: 5;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        color: white;
+        font-size: 24px;
+        
+        .active-selector {
+            padding: 10px 0 10px 15px;
+            background-color: $activeDark;
+            border-right: 5px solid $aqua;
+            cursor: pointer;
+        }
+        
+        .inactive-selector {
+            padding: 10px 0 10px 15px;            
+            cursor: pointer;
+        }
+        
+        .inactive-selector:hover {
+            background-color: $hoverBase;
+        }
+    }
+
+    #map-legend {
+        position: fixed;
+        z-index: 10;
+        left: 20px;
+        //this is adjusted based on how big the legend is
+        bottom: -$legendSize;
+        transition: .7s;
+        color: black;
+        display: none;
+        
+        #show-legend {
+            display: inline-block;
+            padding: 5px 5px 20px 5px;
+            //height: 20px;
+            background-color: lightgray;
+            //border-top-left-radius: 3px;
+            //border-top-right-radius: 3px;
+        }
+        
+        ul {
+            background-color: lightgray;
+            margin: 0;
+            padding: 5px;
+            //border-top-right-radius: 3px;
+            list-style: none;
+            
+            li {
+                color: black;
+                
+                img {
+                    height: 30px;
+                }
+                
+                span {
+                    position: relative;
+                    bottom: 6px;
+                }
+            }
+        }
+    }
+
+    #map-legend:hover {
+        bottom: 0px;
+    }
+
+}
+
+.content-view {
+    display: inline-block;
+    position: absolute;
+    top: $headerHeight;
+    left: $columnWidth;
+    bottom: 0px;
+    right: 0px;
+    display: none;
+}
+
+#map-content {
+    
+    #map-social-wrapper {
+        display: inline-block;
+        width: 70%;
+        float: left;
+        z-index: 3;
+        position: relative;
+        background-color: white;
+        width: calc(100% - 400px);
+        overflow-x: hidden;
+        
+        #no-data {
+            position: absolute;
+            top: 120px;
+            left: calc(#{$socialOptionWidth} + 20%);
+            font-size: 20px;
+        }
+        
+        #bar-chart-map-wrapper{
+            width: calc(100% - #{$socialOptionWidth});
+            display: inline-block;
+        }
+        
+        svg {
+        }
+        
+        p {
+            text-align: center;
+            margin-bottom: 5px;
+        }
+    }
+    
+    #map-data-wrapper {
+        display: inline-block;
+        //border-left: 2px solid $baseColor;
+        height: $mapTopOffset;
+        float: right;
+        position: relative;
+        z-index: 3;
+        background-color: white;
+        width: 350px;
+        
+        p {
+            margin-left: 20px;
+        }
+    }
+    
+    #map-div {
+        position: absolute;
+        top: $mapTopOffset;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }    
+}
+
+#social-content {    
+    table {
+        display: block;
+        max-height: 400px;
+        width: 100%;
+        tr td {
+            border: 1px solid $baseColor;
+        }
+    }
+}
+
+.social-section {
+    border-top: 1px solid $baseColor;
+    display: block;
+    padding: 10px;
+    overflow: auto;
+    
+    svg {
+        //float: left;
+    }
+    
+    .social-option-wrapper {
+        width: $socialOptionWidth;
+        float: left;
+        margin-top: 10px;
+
+        .social-option {
+            display: block;
+
+            input[type="radio"] {
+                display:none;
+            }
+
+            input[type="radio"] + label span {
+                display:inline-block;
+                width:16px;
+                height:16px;
+                margin:-3px 3px 0 0;
+                vertical-align:middle;
+                cursor:pointer;
+                border-radius:  50%;
+            }
+
+            input[type="radio"] + label span {
+                background-color: $baseColor;
+            }
+
+            input[type="radio"]:checked + label span{
+                background-color: $aqua;
+                border: 2px solid $baseColor;
+                width: 13px;
+                height: 13px;
+            }
+            
+            input[type="radio"]:checked + label {
+                font-weight: 600;
+            }
+
+            input[type="radio"] + label span,
+            input[type="radio"]:checked + label span {
+                transition:background-color 0.2s linear;
+            }
+
+            select {
+                @include custom-select(14);
+                color: black;
+            }
+
+            //this only triggers in firefox
+            _:-moz-tree-row(hover), select {
+                background: none;
+                padding-right: 5px;
+            }
+        }
+        
+        .source-option {
+            margin-bottom: 30px;
+        }
+    }
+    
+    #loc-filter-map-div{
+        margin-top: 20px;
+    }
+    
+}
+
+#bar-title {
+    width: 100%;
+    
+    select {
+        @include custom-select(14);
+        color: black;
+    }
+
+    //this only triggers in firefox
+    _:-moz-tree-row(hover), select {
+        background: none;
+        padding-right: 5px;
+    }
+
+}
+
+#numeric-social-section {
+    height: 400px;
+    width: 48%;
+    float: left;
+}
+
+#feed-section {
+    width: 49%;
+    float: right;
+    
+    /* Styles for the html summaries wca vomits */
+    .OFHighlightTerm1 {
+        color: $blueAccent;
+    }
+    .OFHighlightTerm2 {
+        color: $orangeAccent;
+    }
+    .ellipsis {
+        font-weight: 900;
+    }
+}
+
+#semantic-social-section{
+    clear: both;
+    
+    #semantic-main-chart {
+        width: calc(100% - 820px);
+        display: inline-block;
+        float: left;
+        
+        #main-bar-chart-social-wrapper {
+            width: 95%;
+        }
+    }
+    
+    #semantic-filter-chart-wrapper{
+        width: 820px;
+        display: inline-block;
+        text-align: right;
+        
+        span {
+            padding-right: 60px;
+        }
+        
+        .semantic-filter-chart {
+            width: 810px;
+            border-top: 1px solid black;
+            margin: 0 10px 0 0;
+        }
+    }    
+}
+
+/* =======================map styles=================== */
+
+//smoothly move icons maybe
+.leaflet-container img {
+    //transition: .2s;
+}
+
+/* =======================D3 styles=================== */
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+}
+
+.line {
+  fill: none;
+  stroke: $aqua;
+  stroke-width: 1.5px;
+}
+
+.error-line {
+    stroke: $blueAccent;
+    stroke-width: 2;
+    z-index: 100;
+}
+
+.bar-chart {
+    margin: 10px 0 10px 0;
+    
+    rect {
+        stroke: white;
+        fill:  #006565;
+        cursor: pointer;
+    }
+    rect:hover {
+        fill: #029393;
+    }    
+    .score {
+        fill: black;
+        text-anchor: start;
+    }
+    .name {
+        text-anchor: end;
+        fill: black;
+    }
+    .bar-x-label {
+        font-size: 16px;
+    }
+    
+    .axis {
+        font-size: 14px;
+    }
+}
+
+/* ipad */
+
+/*================Responsive Stuff================*/
+
+$break1: 2400px;
+$columnWidthBreak1: 140px;
+
+$break2: 1600px;
+$mapTopOffsetBreak2: $mapTopOffset + 57;
+
+$break3: 1280px;
+$mapTopOffsetBreak3: $mapTopOffsetBreak2 + 57;
+
+@include media-query($break1) {
+    #nav-col {
+        width: $columnWidthBreak1;  
+    }
+    .content-view {
+        left: $columnWidthBreak1;
+    }
+}
+
+@include media-query($break2) {
+    #map-content #map-social-wrapper {
+        display: block;
+        width: 100%;
+    }
+    #map-content #map-data-wrapper {
+        display: block;
+        width: 100%;
+    }
+    #map-content #map-div {
+        top: $mapTopOffsetBreak2;
+    }  
+    #map-content #map-data-wrapper {
+        height: auto;
+        p {
+            margin-left: 20px;
+            display: inline-block;
+            border-left: 1px solid black;
+            padding-left: 5px;
+        }
+    }
+}
+
+@include media-query($break3) {
+    #map-content #map-div {
+        top: $mapTopOffsetBreak3;
+    }  
+    header {
+
+        #title-wrapper {
+
+            img {
+                width: 50px;
+            }
+
+            h1 {
+                display: none;
+            }
+        }
+
+        span {
+            margin-left: 20px;
+        }
+
+        #map-time-slider {
+            display: none;
+            margin-left: 40px;
+        }
+
+    }
+
+}

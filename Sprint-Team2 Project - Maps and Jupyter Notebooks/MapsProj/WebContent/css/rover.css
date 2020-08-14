@@ -1,0 +1,712 @@
+/* line 46, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+   font-weight: 200; }
+a{font-weight: bold;
+	text-decoration: underline;
+	color: #008abf}
+/* line 55, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+header {
+  background-color: #00649d;
+  height: 40px;
+  position: relative;
+  z-index: 5; }
+  /* line 61, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #title-wrapper {
+    display: inline-block;
+    margin-left: 5px;
+    margin-top: -4px; }
+    /* line 67, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #title-wrapper img {
+      width: 40px; }
+    /* line 71, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #title-wrapper h1 {
+      color: white;font-weight: 20;
+      display: inline-block;
+      margin: 0 0 0 0;      
+      position: relative;
+      }
+      header #title-wrapper h3 {
+      color: white;
+      display: inline-block;
+      margin: 0 0 0 0;
+      font-weight: 80;
+      position: relative;
+      }
+  /* line 82, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header span {
+    color: white;
+    margin-left: 100px;
+    position: relative;
+    }
+  /* line 89, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header select {
+    color: white;
+    -webkit-appearance: none;  
+    font-size: 12px;
+    line-height: 1;
+    height: 20px;
+    border: 1px solid #55e1dc;
+    background: url("../img/compressed/down-arrow.png") no-repeat right; }
+    /* line 93, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header select option {
+      background: #00649d; }
+  /* line 99, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header _:-moz-tree-row(hover), header select {
+    background: none;
+    padding-right: 5px; }
+  /* line 104, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #animate {color: white;
+    position: relative; 
+    top: 5px;
+    padding: 3px; 
+    cursor: pointer; 
+  }
+   header #map-time-slider {
+    display: none;
+    margin-left: 100px; }
+    /* line 108, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #map-time-slider #date-elem {
+      display: block;
+      text-align: center;
+      margin-left: 0;
+      padding: 0;
+      position: relative;
+      top: 0px; }
+      
+    /* line 118, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #map-time-slider #slide-input {
+      -webkit-appearance: none;
+      width: 300px;
+      background-color: white;
+      border-radius: 10px;
+      opacity: 1;
+      height: 3px;
+      position: relative;
+      bottom: 6px; }
+    /* line 129, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #map-time-slider #slide-input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      border-radius: 10px;
+      background-color: #55e1dc;
+      border: 1px solid #999;
+      cursor: pointer;
+      width: 16px;
+      height: 16px; }
+  /* line 142, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+   header #ibm {
+        display: inline-block;
+    margin-left: 00px;
+    margin-top: 6px; }
+    header #ibm img {
+      width: 20%; }
+ header #options-toggle {
+    transition: 0.5s;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    font-size: 40px;
+    background-color: #0e1a1c;
+    width: 35px;
+    height: 40px;
+    text-align: center;
+    cursor: pointer; }
+    /* line 154, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #options-toggle span {
+      color: #55e1dc;
+      position: relative;
+      margin: 0;
+      padding: 0;
+      top: 0px; }
+    /* line 161, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    header #options-toggle img {
+      width: 50%; }
+  /* line 166, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #reset-button {
+    color: white;
+    position: fixed;
+    right: 250px;
+    top: 10px;
+    padding: 3px;
+    border: 1px solid white;
+    cursor: pointer; }
+   header #reset-button:hover {
+    background-color: #dddddd; }
+
+  header #filters-button {
+    color: white;
+    position: fixed;
+    right: 250px;
+    top: 10px;
+    padding: 3px;
+    border: 1px solid white;
+    cursor: pointer; }
+   header #filters-button:hover {
+    background-color: #dddddd; }
+    
+  header #export-button {
+    color: white;
+    position: fixed;
+    right: 150px;
+    top: 10px;
+    padding: 3px;
+    border: 1px solid white;
+    cursor: pointer; }
+  /* line 176, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #export-button:hover {
+    background-color: #dddddd; }
+    
+.newanchor:link {
+font-weight: normal;
+color:white;
+text-decoration:none;
+}
+.newanchor:hover{
+color:yellow;
+}
+    
+    
+ header #admin-button {
+    color: white;
+    position: fixed;
+    right: 40px;
+    top: 10px;
+    padding: 3px;
+    border: 1px solid white;
+    cursor: pointer; }
+  /* line 176, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #admin-button:hover {
+    background-color: #dddddd; }
+
+
+/* line 181, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#options-slide {
+  transition: 0.5s;
+  position: fixed;
+  right: -500px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 1001;
+  background: #0e1a1c;
+  color: white;
+  width: 500px; }
+  /* line 192, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide h4 {
+    text-align: center;
+    margin-top: 10px; }
+  /* line 196, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide p {
+    text-align: center;
+    margin: 10px; }
+  /* line 200, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide #show-filter-logic {
+    padding: 0;
+    text-decoration: underline;
+    font-size: 12px;
+    cursor: pointer; }
+  /* line 206, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide #filter-criteria {
+    transition: 0.5s;
+    background-color: white;
+    color: black;
+    border: 5px solid #0e1a1c;
+    overflow: hidden;
+    height: 0px; }
+    /* line 214, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #options-slide #filter-criteria dl dt {
+      float: left;
+      position: relative;
+      top: 4px;
+      width: 100px;
+      text-align: right; }
+      /* line 220, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      #options-slide #filter-criteria dl dt img {
+        height: 16px; }
+    /* line 224, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #options-slide #filter-criteria dl dd {
+      width: 220px;
+      float: right;
+      position: relative;
+      right: 40px; }
+    /* line 230, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #options-slide #filter-criteria dl .clear-dd {
+      height: 4px; }
+  /* line 235, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide input {
+    margin-left: 20px; }
+  /* line 238, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide button {
+    margin: 20px auto 0 auto;
+    display: block; }
+  /* line 242, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide select {
+    color: white;
+    -webkit-appearance: none;
+    padding: 5px;
+    padding-right: 30px;
+    font-size: 12px;
+    line-height: 1;
+    height: 24px;
+    border: 1px solid #55e1dc;
+    background: url("../img/compressed/down-arrow.png") no-repeat right; }
+    /* line 246, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #options-slide select option {
+      background: #0e1a1c; }
+  /* line 250, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide #show-since {
+    position: relative;
+    left: 18px; }
+  /* line 254, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #options-slide a {
+    color: white; }
+
+/* line 259, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#nav-col {
+  width: 2px;
+  background-color: #00649d;
+  height: calc(100% - 70px);
+  position: relative;
+  z-index: 5; }
+  /* line 266, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #nav-col ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    color: white;
+    font-size: 14px; }
+    /* line 273, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #nav-col ul .active-selector { 
+    mpadding: 10px 0 10px 15px;
+        background-color: #008abf; 
+      cursor: pointer; }
+    /* line 280, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #nav-col ul .inactive-selector {
+      spadding: 2px 0 2px 2px;
+      cursor: pointer; }
+    /* line 285, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #nav-col ul .inactive-selector:hover {
+      background-color: #224043; }
+  /* line 290, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #nav-col #map-legend { 
+  width: 100px;
+    position: fixed;
+    z-index: 10;
+    left: 0px;
+    bottom: -500px;
+    transition: .7s;
+    color: black;
+    display: none;  }
+    /* line 300, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #nav-col #map-legend #show-legend {
+      display: inline-block;
+        width: 100px;
+      background-color: lightgray; }
+    /* line 309, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #nav-col #map-legend ul {
+      background-color: lightgray;
+      margin: 0;
+      padding: 5px;
+      list-style: none; }
+      /* line 316, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      #nav-col #map-legend ul li {
+        color: black; }
+        /* line 319, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+        #nav-col #map-legend ul li img {
+          height: 30px; }
+        /* line 323, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+        #nav-col #map-legend ul li span {
+          position: relative;
+          bottom: 6px; }
+  /* line 331, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #nav-col #map-legend:hover {
+    bottom: 0px; }
+
+/* line 337, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+.content-view {
+  display: inline-block;
+  position: absolute;
+  top: 40px; 
+  left: -180px;
+  bottom: 0px;
+  right: 0px;
+  display: none;
+  background-color: #fafafa; }
+  
+  #contenthide {
+  display: inline-block;
+  position: absolute;
+  top: 70px;
+  left: 18px;
+  bottom: 0px;
+  right: 0px;
+  display: none; }
+
+/* line 349, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#map-content #map-social-wrapper {
+  display: inline-block;
+  width: 70%;
+  left:50px;
+  z-index: 3;
+  position: relative; 
+  width: calc(100% - 200px);
+   
+  overflow-x: hidden; }
+  /* line 359, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-social-wrapper #no-data {
+    position: absolute;
+    top: 120px;
+    left: calc(390px + 20%);
+    font-size: 20px; }
+  /* line 366, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-social-wrapper #bar-chart-map-wrapper {
+    width: calc(100% - 390px);
+    display: inline-block; }
+  /* line 374, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-social-wrapper p {
+    text-align: center;
+    margin-bottom: 5px; }
+
+/* line 380, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#map-content #map-data-wrapper { 
+  background-color: #eeeeee;
+  font-weight:bold;
+ }
+  /* line 390, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-data-wrapper p {
+  margin: 0;
+    margin-left: 20px;   
+    border-left: 1px solid black;
+      padding-left: 5px; 
+      display:inline-block;
+       }
+
+/* line 395, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#map-content #map-divsss{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1; }
+  #map-content #map-div {
+  position: static; 
+    height: 100%;
+    width:  100%; 
+  border:1px solid #8AC007;
+ }
+
+/* line 406, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#social-content table {
+  display: block;
+  max-height: 400px;
+  width: 100%; }
+  /* line 410, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #social-content table tr td {
+    border: 1px solid #00649d; }
+
+/* line 416, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+.social-section {
+  border-top: 1px solid #00649d;
+  display: block;
+  padding: 10px;
+  overflow: auto; }
+  /* line 426, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .social-section .social-option-wrapper {
+    width: 390px;
+    float: left;
+    margin-top: 10px; }
+    /* line 431, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    .social-section .social-option-wrapper .social-option {
+      display: block; }
+      /* line 434, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option input[type="radio"] {
+        display: none; }
+      /* line 438, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option input[type="radio"] + label span {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin: -3px 3px 0 0;
+        vertical-align: middle;
+        cursor: pointer;
+        border-radius: 50%; }
+      /* line 448, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option input[type="radio"] + label span {
+        background-color: #00649d; }
+      /* line 452, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option input[type="radio"]:checked + label span {
+        background-color: #55e1dc;
+        border: 2px solid #00649d;
+        width: 13px;
+        height: 13px; }
+      /* line 459, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option input[type="radio"]:checked + label {
+        font-weight: 600; }
+      /* line 464, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option input[type="radio"] + label span,
+      .social-section .social-option-wrapper .social-option input[type="radio"]:checked + label span {
+        transition: background-color 0.2s linear; }
+      /* line 468, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option select {
+        -webkit-appearance: none;
+        padding: 5px;
+        padding-right: 30px;
+        font-size: 14px;
+        line-height: 1;
+        height: 28px;
+        border: 1px solid #55e1dc;
+        background: url("../img/compressed/down-arrow.png") no-repeat right;
+        color: black; }
+      /* line 474, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+      .social-section .social-option-wrapper .social-option _:-moz-tree-row(hover), .social-section .social-option-wrapper .social-option select {
+        background: none;
+        padding-right: 5px; }
+    /* line 480, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    .social-section .social-option-wrapper .source-option {
+      margin-bottom: 30px; }
+  /* line 485, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .social-section #loc-filter-map-div {
+    margin-top: 20px; }
+
+/* line 491, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#bar-title {
+  width: 100%; }
+  /* line 494, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #bar-title select {
+    -webkit-appearance: none;
+    padding: 5px;
+    padding-right: 30px;
+    font-size: 14px;
+    line-height: 1;
+    height: 28px;
+    border: 1px solid #55e1dc;
+    background: url("../img/compressed/down-arrow.png") no-repeat right;
+    color: black; }
+  /* line 500, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #bar-title _:-moz-tree-row(hover), #bar-title select {
+    background: none;
+    padding-right: 5px; }
+
+/* line 507, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#numeric-social-section {
+  height: 400px;
+  width: 48%;
+  float: left; }
+
+/* line 513, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#feed-section {
+  width: 49%;
+  float: right;
+  /* Styles for the html summaries wca vomits */ }
+  /* line 518, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #feed-section .OFHighlightTerm1 {
+    color: #0090ff; }
+  /* line 521, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #feed-section .OFHighlightTerm2 {
+    color: #ffb23b; }
+  /* line 524, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #feed-section .ellipsis {
+    font-weight: 900; }
+
+/* line 529, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+#semantic-social-section {
+  clear: both; }
+  /* line 532, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #semantic-social-section #semantic-main-chart {
+    width: calc(100% - 820px);
+    display: inline-block;
+    float: left; }
+    /* line 537, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #semantic-social-section #semantic-main-chart #main-bar-chart-social-wrapper {
+      width: 95%; }
+  /* line 542, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #semantic-social-section #semantic-filter-chart-wrapper {
+    width: 820px;
+    display: inline-block;
+    text-align: right; }
+    /* line 547, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #semantic-social-section #semantic-filter-chart-wrapper span {
+      padding-right: 60px; }
+    /* line 551, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #semantic-social-section #semantic-filter-chart-wrapper .semantic-filter-chart {
+      width: 810px;
+      border-top: 1px solid black;
+      margin: 0 10px 0 0; }
+
+/* =======================map styles=================== */
+/* =======================D3 styles=================== */
+/* line 567, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+.axis path, .axis line {
+  fill: none;
+  stroke: #000; }
+
+/* line 572, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+.line {
+  fill: none;
+  stroke: #55e1dc;
+  stroke-width: 1.5px; }
+
+/* line 578, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+.error-line {
+  stroke: #0090ff;
+  stroke-width: 2;
+  z-index: 100; }
+
+/* line 584, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+.bar-chart {
+  margin: 10px 0 10px 0; }
+  /* line 587, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .bar-chart rect {
+    stroke: white;
+    fill: #2E9AFE;
+    cursor: pointer; }
+  /* line 592, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .bar-chart rect:hover {
+    fill: #A9D0F5; }
+  /* line 595, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .bar-chart .score {
+    fill: black;
+    text-anchor: start; }
+  /* line 599, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .bar-chart .name {
+    text-anchor: end;
+    fill: black; }
+  /* line 603, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .bar-chart .bar-x-label {
+    font-size: 16px; }
+  /* line 607, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .bar-chart .axis {
+    font-size: 14px; }
+
+/* ipad */
+/*================Responsive Stuff================*/
+@media screen and (max-width: 2400px) {
+  /* line 626, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #nav-col {
+    width: 10px; }
+  /* line 629, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  .content-view {
+    left: 10px; } }
+
+@media screen and (max-width: 1600px) {
+  /* line 635, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-social-wrapper {
+    display: block;
+    width: 100%; }
+  /* line 639, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-data-wrapper {
+    display: block;
+    width: 100%; }
+  /* line 643, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-div {
+   }
+  /* line 646, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-data-wrapper {
+    height: auto; }
+    /* line 648, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+    #map-content #map-data-wrapper p {
+    margin: 0;
+      margin-left: 20px;
+      display: inline-block;
+      border-left: 1px solid black;
+      padding-left: 5px; } }
+
+@media screen and (max-width: 1280px) {
+  /* line 658, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  #map-content #map-div {
+    top: 120px; }
+  /* line 665, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #title-wrapper img {
+    width: 50px; }
+  /* line 669, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #title-wrapper h1 {
+    display: none; }
+  /* line 674, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header span {
+    margin-left: 20px; }
+  /* line 678, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/rover.scss */
+  header #map-time-slider {
+    display: none;
+    margin-left: 40px; } }
+
+/*# sourceMappingURL=rover.css.map */
+
+.resizable-control-container {
+  background: rgba(255, 255, 255, 0.8);
+  border: thin solid;
+  transition: height 500ms, width 500ms;
+  position: relative;
+  padding: 20px;
+  display: none;
+  min-height: 45px;
+}
+.resizable-control-container .btn {
+  background: rgba(255, 255, 255, 0);
+  position: absolute;
+}
+.resizable-control-container .resizable-control-button-resize-full {
+  top: 0;
+  right: 20px;
+  padding: 0 5px;
+}
+.resizable-control-container .resizable-control-button-resize-small {
+  top: 0px;
+  right: 40px;
+  padding: 0 5px;
+}
+.resizable-control-container .resizable-control-button-stats {
+  top: 20px;
+  right: 40px;
+  padding: 0 5px;
+  font-size: 1.4em;
+  z-index: 10;
+}
+.resizable-control-container .btn:hover {
+  color: grey;
+}
+.resizable-control-container .btn:focus {
+  color: inherit;
+}
+.resizable-control-container .ui-resizable-handle {
+  width: 15px;
+  height: 15px;
+}
+.resizable-control-container .ui-resizable-ne {
+  top: 1px;
+  right: 1px;
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+}
+.resizable-control-container .ui-resizable-nw {
+  top: 1px;
+  left: 1px;
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.resizable-control-container .ui-resizable-sw {
+  bottom: 1px;
+  left: 1px;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.resizable-control-container .resizable-control-scrollpane {
+  padding: 0 20px;
+  height: 100%;
+}
+.resizable-control-container .resizable-control-scrollpane .jspContainer .jspVerticalBar {
+  width: 10px;
+}
+.resizable-control-container .resizable-control-scrollpane .jspContainer .jspHorizontalBar {
+  display: none;
+}
+

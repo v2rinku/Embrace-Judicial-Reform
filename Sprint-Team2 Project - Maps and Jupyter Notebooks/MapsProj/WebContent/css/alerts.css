@@ -1,0 +1,11 @@
+#nws.bordered ul {
+	padding: 2px 4px;
+    border: 1px solid gray;
+    width: 98.5%;
+    margin: 6px 0px;
+    border-radius: 4px;
+}
+
+.ibm-refresh-link{	
+	color:icon-button;
+}

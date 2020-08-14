@@ -1,0 +1,145 @@
+
+/* www override. not sure what the source of that is */
+.ibm-columns {
+  margin-top: 5px;
+  width: 100%;
+  padding: 0;
+}
+
+.ibm-col-1-1 {
+  width: 100%;
+  margin: 0;
+}
+
+ 
+
+/*New CSS Styling*/
+#parentid.main-parent-section .main-parent-wrapper {
+	/* width: 85%;
+	margin: 0 auto;
+	box-shadow: 2px 4px 10px 10px #cccbcb;
+    padding: 0 20px; */
+    width: 100%;
+}
+
+ 
+
+#parentid .child, #parentid .child2 {
+	display: inline-block;
+	vertical-align: top;
+	float: none;
+}
+.ibm-riskbar {
+	background: #f1f1f1;
+}
+.ibm-landing-page div, .ibm-landing-page p {
+	font-size: 14px;
+}
+#ibm-content-main .ibm-topbar {
+	box-shadow: 1px 1px 0px 2px #f5f5f5;
+    background: #f5f5f5;
+}
+#ibm-content-main .ibm-topbar .btn-primary {
+	background-color: transparent;
+    border-color: #245580;
+    color: #245580;
+    border-radius: 0;
+    box-shadow: none;
+}
+#date-elem {
+	display: block;
+}
+#reset-btn.ibm-reset-btn {
+	float: right;
+	border-radius: 0;
+	box-shadow: none;
+}
+.ibm-events-block {
+	position: relative;
+}
+.ibm-events-block i.ibm-refresh-link {
+	position: absolute;
+	top: 7px;
+	width: 30px;
+	height: 30px;
+	right: -31px;
+}
+a.refresh-link{
+  margin-right:8px;
+}
+.ibm-events-block .date-textbox {
+    position: relative;
+}
+.ibm-events-block .date-textbox i.ibm-calendar-link {
+	position: absolute;
+	right: 35px;
+}
+.events-block-wrapper {
+	padding-bottom: 10px;
+}
+/*.events-block-wrapper a.refresh-link {
+	width: 30px;
+    margin-left: 10px;
+    display: inline-block;
+    height: 34px;
+    vertical-align: bottom;
+}*/
+.pref-link {
+	padding-top: 0.5em;
+}
+.select2-container {
+	width: 100% !important;
+}
+#onlyanalytics .select2-container {
+	width: 122px !important;
+}
+#nopreflocation, #showfilters {
+	padding: 0 0 10px 0 !important;
+}
+.anchor-link-btn {
+	border: 1px solid #2e3b41;
+    padding: 10px 10px;
+    color: #2e3b41 !important;
+    margin-right: 5px;
+    width: 31%;
+    display: inline-block;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    background: skyblue;
+    font-size: 16px;
+    border-radius: 8px;
+}
+.anchor-link-btn a {
+	color: #2e3b41 !important;
+	font-size: 16px;
+}
+.anchor-link-btn a:hover, .anchor-link-btn:hover {
+	text-decoration: none;
+}
+.ibm-form-elem-grp .select2-container {
+    width: 45% !important;
+}
+#risks-select.ibm-form-elem-grp .select2-container {
+	width: 46% !important;
+}
+.filter-btn .anchor-link-btn {
+	width: 47%;
+}
+input::-webkit-calendar-picker-indicator,
+input::-webkit-inner-spin-button {
+    /*display: none;*/
+}
+.select2-container .select2-dropdown .select2-results {
+	height: 230px;
+	overflow-y: auto;
+	font-size:12px;
+}
+
+/*Global*/
+.float-right {
+	float: right !important;
+}
+/*Global*/
+  

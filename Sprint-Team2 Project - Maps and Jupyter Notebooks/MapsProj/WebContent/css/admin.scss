@@ -1,0 +1,228 @@
+$fontStack: Helvetica, sans-serif;
+$baseColor: #132527;
+$aqua: #55e1dc;
+$blueAccent: #0090ff;
+$activeDark: #0e1a1c;
+$hoverBase: #224043;
+
+@mixin horizontal-align {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin media-query($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: $fontStack;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#rover-icon {
+    position: absolute;
+    top: 10px;
+    width: 50px;
+}
+
+header {
+    background-color: $baseColor;
+    
+     #titleWrapper {
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        
+        h1 {
+            margin: 0;
+            padding: 10px;
+            color: white;
+            font-weight: 300;
+        }
+        
+    } 
+}
+
+.uploadWrapper{
+    text-align: right;
+    margin-top: 90px;
+    margin-bottom: 0;
+    color: black;
+
+    span {
+        position: relative;
+        right: 30px;
+    }
+
+    input {
+        transform: scale(1.2,1.2);
+    }    
+} 
+
+section {
+    margin-top: 20px;
+    width: 90%;
+    @include horizontal-align;
+
+    h2 {
+        font-weight: 300;
+    }
+    
+    .mybtn {
+        border: 1px solid black;
+        display:inline-block;
+        border-radius: 2px;
+        padding: 1px;
+        width: 20px;
+        cursor: pointer;
+        text-align: center;
+    }
+    
+    table {
+        width: 100%;
+        font-size: 18px;
+        margin-top: 20px;
+        
+        th {
+            background-color: transparent;
+        }
+        
+        td {
+            background-color: #eaeaea;
+        }
+        
+        .td-with-btn{
+            width: 20px;
+        }
+                
+        .edit:hover {
+            color: blue;
+        }
+        
+        .delete:hover {
+            color: red;
+        }
+    }
+
+    #add-btn:hover {
+        color: green;
+    }
+    
+    .ng-table-counts {
+        float: right;
+    }
+    
+    .pagination {
+        list-style: none;
+        float: left;
+        padding-left: 0;
+        
+        li {
+            display: inline;
+
+            a {
+                border: 1px solid gray;
+                margin: 0px;
+                padding: 5px;
+                text-decoration: none;
+            }
+            
+            a:hover {
+                background-color: lightgray;
+            }
+            
+            a:visited {
+                color: black;
+            }
+        }
+    }
+    
+    //next two are pagination styles from bootstrap    
+    .pagination>.active>a, 
+    .pagination>.active>span, 
+    .pagination>.active>a:hover, 
+    .pagination>.active>span:hover, 
+    .pagination>.active>a:focus, 
+    .pagination>.active>span:focus {
+      z-index: 2;
+      color: #fff;
+      cursor: default;
+      background-color: $blueAccent;
+      border-color: #428bca;
+    }
+    
+    default:hover, 
+    .btn-default:focus, 
+    .btn-default:active, 
+    .btn-default.active, 
+    .open 
+    .dropdown-toggle.btn-default {
+      color: #333;
+      background-color: #b4b4b4;
+      border-color: #777777;
+    }
+}
+
+.edit-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);    
+    z-index: 1;
+    transition: .5s;
+    
+    .edit-div {
+        background-color: $baseColor;
+        width: 500px;
+        height: 500px;
+        color: white;
+        z-index: 2;
+        
+        @include horizontal-align;
+        @include vertical-align;
+        
+        text-align: right;
+        
+        h2 {
+            position: absolute;            
+            font-weight: 300;
+            margin-left: 40px;
+        }
+        
+        form {
+            @include vertical-align;
+            margin-right: 100px;
+        }
+        
+        button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+        }
+        
+        .cancel-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            display: none;
+        }
+    }
+}

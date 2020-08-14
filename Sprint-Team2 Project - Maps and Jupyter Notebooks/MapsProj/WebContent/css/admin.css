@@ -1,0 +1,275 @@
+/* line 27, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+ font-size: 13px; 
+  font-weight: 300; }
+  h2 { 
+    color:#000066;
+    font-weight: bold; 
+     margin-left: 50px;}
+   a:link {
+    text-decoration: none;
+    /*color: #0000aa;*/
+    font-weight:bold;
+}
+
+a:visited {
+    text-decoration: none;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+body a:focus{
+	outline:none !important;
+}
+/* line 36, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+#rover-icon {
+  position: absolute;
+  top: 10px;
+  width: 50px; }
+
+/* line 42, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+header {
+  background-color: #00649d; }
+  /* line 45, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  header #titleWrapper {
+    width: 100%;
+    display: inline-block;
+    text-align: center; }
+    /* line 50, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    header #titleWrapper h1 {
+      margin: 0;
+      padding: 10px;
+      font-weight: bold; 
+      font-size: 18px; 
+      color: white;  }
+.bluewrap { 
+		background-color:#fafafa;
+	border:1px solid #666;  
+	padding: 5px;  
+	margin: 5px;
+	
+	width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
+}
+/* line 60, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+.uploadWrapper { 
+	padding: 5px;  
+	margin: 5px;
+	width:95%;
+   margin-left: auto;
+  margin-right: auto;
+  color: black; }
+  /* line 66, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  .uploadWrapper span { }
+  /* line 71, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  .uploadWrapper inputm {
+    transform: scale(1.2, 1.2); }
+
+ .uploadWrapper .mydownbtn {
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 1px;
+    width:180px;
+    cursor: pointer;
+    text-align: center; }
+    
+/* line 76, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+section {
+		padding: 5px;  
+	margin: 5px;
+  margin-top: 20px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 81, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section h2 {
+    font-weight: 100;
+     margin-left: 200px;
+    color:#000066 }
+  /* line 85, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section .mybtn {
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 1px;
+    width: 20px;
+    cursor: pointer;
+    text-align: center; }  
+    section .mydownbtn {
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 2px;
+    padding: 1px;
+    width:180px;
+    cursor: pointer;
+    text-align: center; }
+  /* line 95, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section table {
+    width: 100%; 
+    margin-top: 20px; }
+    /* line 100, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    section table th {
+      background-color: #cccccc; 
+      height:40px;
+     font-weight:bold;}
+    /* line 104, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    section table td {
+      background-color: #eaeaea;
+      padding: 4px;
+   }
+     section table tr:hover {
+      background-color: #fafafa;
+     }
+    /* line 108, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    section table .td-with-btn {
+      width: 20px; }
+    /* line 112, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    section table .edit:hover {
+      color: blue; }
+    /* line 116, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    section table .delete:hover {
+      color: red; }
+  /* line 121, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section #add-btn:hover {
+    color: green; }
+  /* line 125, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section .ng-table-counts {
+    float: right; }
+  /* line 129, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section .pagination {
+    list-style: none;
+    float: left;
+    padding-left: 0; }
+    /* line 134, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    section .pagination li {
+      display: inline; }
+      /* line 137, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+      section .pagination li a {
+        border: 1px solid gray;
+        margin: 0px;
+        padding: 5px;
+        text-decoration: none; }
+      /* line 144, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+      section .pagination li a:hover {
+        background-color: lightgray; }
+      /* line 148, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+      section .pagination li a:visited {
+        color: black; }
+  /* line 160, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section .pagination > .active > a,
+  section .pagination > .active > span,
+  section .pagination > .active > a:hover,
+  section .pagination > .active > span:hover,
+  section .pagination > .active > a:focus,
+  section .pagination > .active > span:focus {
+    z-index: 2;
+    color: #fff;
+    cursor: default;
+    background-color: #0090ff;
+    border-color: #428bca; }
+  /* line 173, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  section default:hover,
+  section .btn-default:focus,
+  section .btn-default:active,
+  section .btn-default.active,
+  section .open
+.dropdown-toggle.btn-default {
+    color: #333;
+    background-color: #b4b4b4;
+    border-color: #777777; }
+
+/* line 180, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+.edit-wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+   
+  z-index: 1;
+  transition: .5s; }
+  /* line 191, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+  .edit-wrapper .edit-div {
+    background-color: #eeeeee; 
+    padding:5px;
+	border:1px solid #666;  
+    width: 450px;
+    height: 475px;
+    color: #000066;
+   font-weight: bold;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: right; }
+    /* line 203, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    .edit-wrapper .edit-div h2 {
+      position: absolute;
+      font-weight: 300;
+      margin-left: 40px;
+    color: #0000AA;
+   font-weight: bold; }
+    /* line 209, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    .edit-wrapper .edit-div form {
+      position: relative;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      margin-right: 100px; }
+    /* line 214, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    .edit-wrapper .edit-div button {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      display: none; }
+    /* line 221, C:/Users/IBM_ADMIN/Desktop/2015-riskrover/RiskRover/WebContent/css/admin.scss */
+    .edit-wrapper .edit-div .cancel-btn {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      display: none; }
+
+/*# sourceMappingURL=admin.css.map */
+
+.customLinks .ibm-ind-link{
+	  background: #f5f5f5;
+	  border: 1px solid #ddd;	
+	  padding: 13px 10px;
+	  cursor:pointer;
+	}
+.customLinks .ibm-ind-link:hover{
+	background: #ddd;
+	  border: 1px solid #ccc;
+}	
+
+#ibm-secondary-tabs .ibm-tabs a{
+	position: relative;
+    padding-left: 26px !important;
+        font-size: 14px;
+    font-weight: normal;
+}
+.customLinks .tabContentWrap{
+	display:none;
+}
+	
